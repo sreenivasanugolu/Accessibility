@@ -1,0 +1,51 @@
+group 'org.test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://repo1.perfectomobile.com/public/repositories/maven'
+    }
+}
+
+dependencies {
+
+    implementation 'org.testng:testng:6.10'
+    implementation 'com.perfecto.reporting-sdk:reportium-testng:2.3'
+    implementation 'com.perfecto.reporting-sdk:reportium-import-java:2.3'
+    implementation 'com.perfectomobile:pm-webdriver:18.1.0.0'
+    implementation 'com.perfectomobile:intellij-connector:18.1.0.0'
+
+    implementation ('com.perfecto.reporting-sdk:reportium-java:1.1.23') {
+        exclude group: "org.seleniumhq.selenium", module: "selenium-remote-driver"
+        exclude group: "org.seleniumhq.selenium", module: "selenium-java"
+        exclude group: "org.seleniumhq.selenium", module: "selenium-api"
+    }
+
+    implementation 'commons-codec:commons-codec:1.10'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'dom4j:dom4j:1.6.1'
+    implementation 'com.google.code.gson:gson:2.5'
+    implementation 'com.google.guava:guava:19.0'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.1'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.4'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.7.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.7.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.7.0'
+    implementation 'io.appium:java-client:3.4.1'
+    implementation 'jaxen:jaxen:1.1.6'
+    implementation 'org.slf4j:jcl-over-slf4j:1.7.16'
+    implementation 'org.json:json:20151123'
+    implementation 'ch.qos.logback:logback-classic:1.1.8'
+    implementation 'ch.qos.logback:logback-core:1.1.8'
+    implementation 'org.seleniumhq.selenium:selenium-api:2.53.0'
+    implementation 'org.seleniumhq.selenium:selenium-remote-driver:2.53.0'
+    implementation 'org.seleniumhq.selenium:selenium-support:2.53.0'
+    implementation 'org.slf4j:slf4j-api:1.7.16'
+
+}
